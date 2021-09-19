@@ -1,9 +1,6 @@
-package com.sofkau.catacrudback.controller;
+package com.sofkau.catacrudback;
 
-import com.sofkau.catacrudback.entities.Todo;
-import com.sofkau.catacrudback.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,8 +13,9 @@ public final class TodoController {
     public Iterable<Todo>list(){
         return service.list();
     }
+
     @PostMapping("api/todo")
-    public Todo save(Todo todo){
+    public Todo save(@RequestBody Todo todo){
         return service.save(todo);
     }
 
@@ -34,6 +32,7 @@ public final class TodoController {
     public void delete(@PathVariable("id")Long id) {
         service.delete(id);
     }
+
     @GetMapping(value = "api/{id}/todo")
     public Todo get(@PathVariable("id") Long id){
         return service.get(id);

@@ -1,11 +1,11 @@
-package com.sofkau.catacrudback.entities;
+package com.sofkau.catacrudback;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public final class Todo {
+public  class Todo {
 
     @Id
     @GeneratedValue

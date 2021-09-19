@@ -1,6 +1,6 @@
-package com.sofkau.catacrudback.repository;
+package com.sofkau.catacrudback;
 
-import com.sofkau.catacrudback.entities.Todo;
+import com.sofkau.catacrudback.Todo;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TodoRepository extends CrudRepository<Todo, Long> {
